@@ -17,7 +17,7 @@ with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     next(csvreader)
     for row in csvreader:
-            profit = sum(int(row))
+            profit = profit + int(row[1])
 
     
 #define analysis for outputs
