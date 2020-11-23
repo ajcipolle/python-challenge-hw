@@ -55,7 +55,7 @@ change_profit = change_profit[:-1]
 # print(f"Monthly list of change in profit = {change_profit}")
 
 #Define avg, min and max monthly profit changes
-avg_change_profit = sum(change_profit) / len(change_profit)
+avg_change_profit = round(sum(change_profit) / len(change_profit))
 max_change_profit = max(change_profit)
 min_change_profit = min(change_profit)
 
@@ -68,15 +68,15 @@ print(f"Total Months = {count}")
 
 # total_profit =
 total_profit = profit
-print(f"Total Profit = {profit}")
+print(f"Total Profit = ${profit}")
 
 # avg_change_profit = 
-print(f"Average Monthly Change in Profits = {avg_change_profit}")
+print(f"Average Monthly Change in Profits = ${avg_change_profit}")
 
 # max_inc_profit =
-print(f"Maximum Monthly Increase in Profits = {max_change_profit}")
+print(f"Maximum Monthly Increase in Profits = ${max_change_profit}")
 # max_dec_losses = 
-print(f"Maximum Monthly decrease in Profits = {min_change_profit}")
+print(f"Maximum Monthly decrease in Profits = ${min_change_profit}")
 
 
 # export as a .txt text file
@@ -90,12 +90,12 @@ print(f"Total Months = {count}")
 
 # total_profit =
 total_profit = profit
-print(f"Total Profit = {profit}")
+print(f"Total Profit = ${profit}")
 
 # avg_change_profit = 
-print(f"Average Monthly Change in Profits = {avg_change_profit}")
+print(f"Average Monthly Change in Profits = ${avg_change_profit}")
 
 # max_inc_profit =
-print(f"Maximum Monthly Increase in Profits = {max_change_profit}")
+print(f"Maximum Monthly Increase in Profits = ${max_change_profit}")
 # max_dec_losses = 
-print(f"Maximum Monthly decrease in Profits = {min_change_profit}")
+print(f"Maximum Monthly decrease in Profits = ${min_change_profit}")
