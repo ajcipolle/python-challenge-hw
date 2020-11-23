@@ -12,7 +12,7 @@ with open(csvpath, newline='') as csvfile:
     next(csvreader)
     for row in csvreader:
         count = count + 1
-print(count)
+# print(count)
 
 # sum the totals of the second column 
 profit = 0
@@ -60,7 +60,7 @@ max_change_profit = max(change_profit)
 min_change_profit = min(change_profit)
 
 # print to terminal
-
+print("PyBank Monthly Profits Analysis:" + "\n" + "**************")
 
 #total months
 total_months = count
@@ -80,4 +80,22 @@ print(f"Maximum Monthly decrease in Profits = {min_change_profit}")
 
 
 # export as a .txt text file
+import sys
+sys.stdout = open("Analysis/pybank_analysis.txt", "w")
+print("PyBank Monthly Profits Analysis:" + "\n" + "**************")
 
+#total months
+total_months = count
+print(f"Total Months = {count}")
+
+# total_profit =
+total_profit = profit
+print(f"Total Profit = {profit}")
+
+# avg_change_profit = 
+print(f"Average Monthly Change in Profits = {avg_change_profit}")
+
+# max_inc_profit =
+print(f"Maximum Monthly Increase in Profits = {max_change_profit}")
+# max_dec_losses = 
+print(f"Maximum Monthly decrease in Profits = {min_change_profit}")
