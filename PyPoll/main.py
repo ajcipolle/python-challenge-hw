@@ -69,16 +69,17 @@ with open(csvpath, newline='') as csvfile:
             otooley = otooley + 1
 
 
-percent_khan = round(100*(khan / vote_count),3)
-percent_li = round(100*(li / vote_count),3)
-percent_correy = round(100*(correy / vote_count),3)
-percent_otooley = round(100*(otooley / vote_count),3)      
+percent_khan = round(100*(khan / vote_count),4)
+percent_li = round(100*(li / vote_count),4)
+percent_correy = round(100*(correy / vote_count),4)
+percent_otooley = round(100*(otooley / vote_count),4)      
 print("Election Results" + "\n" + "------------------" + "\n")    
 print(f"Total Votes: {vote_count}\n-----------------")
 print(f"Khan: ({percent_khan}%), {khan} votes")
 print(f"Li: ({percent_li}%), {li} votes")
 print(f"Correy: ({percent_correy}%), {correy} votes")
 print(f"O'Tooley: ({percent_otooley}%), {otooley} votes")
+print("\n" + "------------------" + "\n" + "Winner: Khan")    
 
 # export as a .txt text file
 import sys
@@ -89,3 +90,4 @@ print(f"Khan: ({percent_khan}%), {khan} votes")
 print(f"Li: ({percent_li}%), {li} votes")
 print(f"Correy: ({percent_correy}%), {correy} votes")
 print(f"O'Tooley: ({percent_otooley}%), {otooley} votes")
+print("\n" + "------------------" + "\n" + "Winner: Khan")    
