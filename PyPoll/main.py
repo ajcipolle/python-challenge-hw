@@ -12,7 +12,7 @@ with open(csvpath, newline='') as csvfile:
     next(csvreader)
     for row in csvreader:
         vote_count = vote_count + 1
-print(f"Total Votes: {vote_count}")
+# print(f"Total Votes: {vote_count}")
 
 candidates = []
 with open(csvpath, newline='') as csvfile:
@@ -69,10 +69,22 @@ with open(csvpath, newline='') as csvfile:
             otooley = otooley + 1
 
 
-percent_khan = round(100*(khan / vote_count),6)
-percent_li = round(100*(li / vote_count),6)
-percent_correy = round(100*(correy / vote_count),6)
-percent_otooley = round(100*(otooley / vote_count),6)      
+percent_khan = round(100*(khan / vote_count),3)
+percent_li = round(100*(li / vote_count),3)
+percent_correy = round(100*(correy / vote_count),3)
+percent_otooley = round(100*(otooley / vote_count),3)      
+print("Election Results" + "\n" + "------------------" + "\n")    
+print(f"Total Votes: {vote_count}\n-----------------")
+print(f"Khan: ({percent_khan}%), {khan} votes")
+print(f"Li: ({percent_li}%), {li} votes")
+print(f"Correy: ({percent_correy}%), {correy} votes")
+print(f"O'Tooley: ({percent_otooley}%), {otooley} votes")
+
+# export as a .txt text file
+import sys
+sys.stdout = open("Analysis/pypoll_analysis.txt", "w")
+print("Election Results" + "\n" + "------------------" + "\n")    
+print(f"Total Votes: {vote_count}\n-----------------")
 print(f"Khan: ({percent_khan}%), {khan} votes")
 print(f"Li: ({percent_li}%), {li} votes")
 print(f"Correy: ({percent_correy}%), {correy} votes")
