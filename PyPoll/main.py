@@ -22,7 +22,7 @@ with open(csvpath, newline='') as csvfile:
         candidates.append(row[2])
 # print(candidates)
 candidates_set = set(candidates)
-print(candidates_set)
+# print(candidates_set)
 
 
 khan = 0
@@ -36,25 +36,44 @@ with open(csvpath, newline='') as csvfile:
     for row in csvreader:
         if row[2] == "Khan":
             khan = khan + 1
-print(f"Khan: (percentage), ({khan}) votes")
+            # if row[2] == "Li":
+            #     li = li + 1
+            #     if row[2] == "Correy":
+            #         correy = correy + 1
+            #     else: 
+            #         otooley = otooley + 1
+
+
+
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     next(csvreader)
     for row in csvreader:
         if row[2] == "Li":
             li = li + 1
-print(f"Li: (percentage), ({li}) votes")
+
+
+
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     next(csvreader)
     for row in csvreader:
         if row[2] == "Correy":
             correy = correy + 1
-print(f"Correy: (percentage), ({correy}) votes")
+
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     next(csvreader)
     for row in csvreader:
         if row[2] == "O'Tooley":
             otooley = otooley + 1
-print(f"Correy: (percentage), ({otooley}) votes")
+
+
+percent_khan = round(100*(khan / vote_count),6)
+percent_li = round(100*(li / vote_count),6)
+percent_correy = round(100*(correy / vote_count),6)
+percent_otooley = round(100*(otooley / vote_count),6)      
+print(f"Khan: ({percent_khan}%), {khan} votes")
+print(f"Li: ({percent_li}%), {li} votes")
+print(f"Correy: ({percent_correy}%), {correy} votes")
+print(f"O'Tooley: ({percent_otooley}%), {otooley} votes")
